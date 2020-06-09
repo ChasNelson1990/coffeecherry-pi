@@ -1,5 +1,7 @@
 # The CoffeeCherry Pi
 
+![CoffeeCherry Pi Logo](coffeecherry-pi.svg)
+
 ## Making a semi-automatic espresso machine fully automatic
 
 This is a personal project to build a Raspberry Pi-based system for automatically profiling and allowing full digital control of a Gagglia Classic semi-automatic espresso machine.
