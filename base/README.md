@@ -9,9 +9,9 @@ The main aim of this is so that I have a reference (including photographs) of ho
 
 Link: https://wiki.wholelattelove.com/images/6/6a/CLASSIC_Parts_Diagram.pdf
 
-However, it's often easier to remind mhyself of the simple design of the Gaggia Classic:
+However, it's often easier to remind myself of the simple design of the Gaggia Classic:
 
-![A simplistic sketch of the Gaggia Classic'c components.](/assets/sketch.svg)
+![A simplistic sketch of the Gaggia Classic'c components.](./assets/sketch.svg)
 
 ### Wiring diagram
 
