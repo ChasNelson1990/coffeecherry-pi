@@ -76,7 +76,9 @@ Each feature has been given it's own directory (with the name matching the highl
 Many features will be independent, i.e. you can pick and choose which you add to your system.
 However, eveything has been designed under the assumption that you will be using the core `coffeecherry` feature and interacting with the device through the same home automation system as me.
 
-There is also a `base` folder which contains my understanding of the original system; this is mostly for reference.
+There is also a `base` directory, which contains my understanding of the original system; this is mostly for reference.
+
+Finally, there is an `additional` folder that contains links to resources for other mods I've made to my machine that aren't part of the CoffeeCherry Pi control system.
 
 ### Bills of Material
 
