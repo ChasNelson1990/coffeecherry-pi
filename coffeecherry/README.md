@@ -45,3 +45,10 @@ If you're new to `raspi-config` read this page: https://www.raspberrypi.org/docu
 
 Open a terminal and clone this repository onto your new and set-up Raspberry Pi.
 Using `cd ~; git clone git@github.com:ChasNelson1990/coffeecherry-pi.git` will clone the repository to the Raspberry Pi default user's home folder - this is where we want it.
+
+### Install CoffeeCherry Pi
+
+Essentially CoffeeCherry Pi runs a Flask-RESTful server that our Home Assistant instance can interact with over the network.
+The `install.py` script installs pre-requisites (globally) and moves files that need to be moved and starts a systemd service that runs the server on boot.
+
+Run the script as `sudo install.py`.
