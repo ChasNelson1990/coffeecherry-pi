@@ -5,7 +5,7 @@ The main aim of this is so that I have a reference (including photographs) of ho
 
 ## Schematics
 
-## Parts diagram
+### Parts diagram
 
 Link: https://wiki.wholelattelove.com/images/6/6a/CLASSIC_Parts_Diagram.pdf
 
@@ -13,7 +13,7 @@ However, it's often easier to remind myself of the simple design of the Gaggia C
 
 ![A simplistic sketch of the Gaggia Classic's components.](./assets/sketch.svg)
 
-### Wiring diagram
+### Wiring diagrams
 
 Link: https://wiki.wholelattelove.com/images/a/aa/CLASSIC_Electrical_Diagram.pdf
 
@@ -56,3 +56,14 @@ Because the solenoid is still closed water can't go through the brew head.
 When the steam valve is opened then steam rushes through the wand but is quickly replaced by the water being pumped into the boiler and so eventually get a solid stream of water from the steam wand.
 
 ![Completed circuits when the Gaggia Classic is in the STEAM+BREW state.](./assets/steam-brew.svg)
+
+## Recommended Tools
+
+For the mods described in this repository you will need the following tools and 'stock' products.
+
+* High-temperature wire (e.g. RS Stock No. 724-4496) - this is the important wire, must be capable of carrying mains voltage and be able to deal with the currents being drawn by the boiler.
+* Any old wires (e.g. RS Stock No. 120-9208) - this wire is less important and will be used for connecting the Raspberry Pi to sensors and switches.
+* Heat shrink tubing (e.g. RS Stock No. 170-6298) - this shrink wrap is pretty comfortable at high temperatures and is used to protect connections and soldering joints or also just to give an extra layer of protection to wires near the boiler.
+* Spade connectors (e.g. RS Stock No. 534-828) - you can't solder wires to the boiler (because it's to hot) so we'll use crimp spade connectors for most of our junctions, get a box set. Note: colour indicates width.
+
+Note: you will also need access to a 3D printer. If you don't have a 3D printer there are many services online that are cheap and quick.
