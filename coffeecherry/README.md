@@ -52,3 +52,8 @@ Essentially CoffeeCherry Pi runs a Flask-RESTful server that our Home Assistant 
 The `install.py` script installs pre-requisites (globally) and moves files that need to be moved and starts a systemd service that runs the server on boot.
 
 Run the script as `sudo install.py`.
+
+### Updating CoffeeCherry Pi
+
+To update your CoffeeCherry Pi when there's a new release log into your Raspberry Pi (either via SSH/VNC or by connecting it to a monitor) and run the following commands: `cd ~/coffeecherry-pi; git pull; sudo install.py`.
+Please bear in mind that this will overwrite any local custom changes you've made so you should probably back up first.
