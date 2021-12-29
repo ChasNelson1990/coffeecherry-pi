@@ -54,7 +54,7 @@ Note: these choices are based heavily on reading about the other amazing project
 - [ ] Water `tank` fill monitoring - a simple water level sensor system to ensure the tank never runs dry.
 - [ ] `pid` temperature control - this is a more efficient and accurate algorithm for controlling the boiler temperature to ensure consistent espresso extraction.
 - [ ] Ready `alarm` - a simple alarm to notify you that the system is warmed up and ready to go.
-- [ ] Extraction `timer` - automated measurement and/or control of the extraction time for a shot.
+- [ ] Extraction `brew` - automated extraction of a shot (based on time).
 - [ ] `recipes` - a simple way to programme in recipes (i.e. extraction temperature and time [and later pressure and more]) that can be re-used and easily modified, i.e. for new beans.
 - [ ] `one-push` shot extraction - extract a shot by pressing a single button.
 - [ ] Automatic `steam` switch - automatically flip the steam switch after a shot is extracted to speed up the total time to flat white deliciousness.

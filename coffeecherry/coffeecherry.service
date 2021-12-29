@@ -1,13 +1,9 @@
 [Unit]
 Description=CoffeeCherry Pi Server
-After=network-online.target
+
 [Service]
-ExecStart=/usr/bin/python3 coffeecherry.py
-WorkingDirectory=/home/pi/
-StandardOutput=inherit
-StandardError=inherit
-Restart=always
-User=pi
+Environment="FLASK_APP=/home/pi/coffeecherry-pi/coffeecherry/coffeecherry.py"
+ExecStart=/usr/bin/python3 -m flask run --host=0.0.0.0
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=default.target

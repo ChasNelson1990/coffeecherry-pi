@@ -1,0 +1,6 @@
+switch:
+  - platform: rest
+    name: 'CoffeCherry Pi Manual'
+    resource: http://192.168.0.10:5000/manual/
+    body_on: 'on'
+    body_off: 'off'
