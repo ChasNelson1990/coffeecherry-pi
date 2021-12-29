@@ -18,6 +18,10 @@ Important: I have not included any of the official cases because a) they leave o
 I intend to design a case that does the opposite for 3D printing as I want to minimise openings (for water protection).
 For now, use any case but just be careful to keep the case away from any water.
 
+## Pins Used
+
+None.
+
 ## Instructions
 
 ### Install Raspberry Pi OS
@@ -27,6 +31,8 @@ If you're completely new to Raspberry Pis I suggest you follow this tutorial: ht
 If you're comfortable with Raspberry Pis then set one up with the latest Raspberry Pi OS; I used the 32-bit version with desktop and default software just for ease.
 
 Be sure to set-up your timezone, language and WiFi connection.
+
+Don't change the default username from `pi` (but do change the password).
 
 ### `raspi-config`
 
@@ -40,21 +46,27 @@ If you're new to `raspi-config` read this page: https://www.raspberrypi.org/docu
 3. If you're not use to the command line and SSH then you could turn on and set-up the VNC interface - I will not write anymore about this.
 4. As I won't use the graphical interface I have also set the boot options to load straight into command line.
 5. While you're in the boot options, ensure that the boot waits for the network to be available as we need that for communicating between the CoffeeCherry Pi and the main Home Assistant server.
-6. And we need access to the GPIO pins remotely.
 
 ### Clone CoffeeCherry Pi onto the Raspberry Pi
 
 Open a terminal and clone this repository onto your new and set-up Raspberry Pi.
 Using `cd ~; git clone git@github.com:ChasNelson1990/coffeecherry-pi.git` will clone the repository to the Raspberry Pi default user's home folder - this is where we want it.
 
-### Install CoffeeCherry Pi
+### Customising Your CoffeeCherry Pi
 
 Essentially CoffeeCherry Pi runs a Flask-RESTful server that our Home Assistant instance can interact with over the network.
-The `install.py` script installs pre-requisites (globally) and moves files that need to be moved and starts a systemd service that runs the server on boot.
+I've designed it using Flask blueprints that are included in the server by including a line like the following in `coffeecherry.py`:
+```app.register_blueprint(smart).```
+If there's a feature you don't want - comment that line out.
 
-Run the script as `sudo install.py`.
+### Install CoffeeCherry Pi (and dependencies)
+
+The `install.py` script moves files that need to be moved and starts a systemd service that runs the server on boot.
+The `requirements.txt` file (in the root folder) lists the dependencies.
+
+Run the following to do everything: `cd ~/coffeecherry-pi; python3 -m pip install -r requirements.txt; cd ./coffeecherry/; python3 install.py install`.
 
 ### Updating CoffeeCherry Pi
 
-To update your CoffeeCherry Pi when there's a new release log into your Raspberry Pi (either via SSH/VNC or by connecting it to a monitor) and run the following commands: `cd ~/coffeecherry-pi; git pull; sudo install.py`.
+To update your CoffeeCherry Pi when there's a new release log into your Raspberry Pi (either via SSH/VNC or by connecting it to a monitor) and run the following commands: `cd ~/coffeecherry-pi; git pull; python3 -m pip install -r requirements.txt; cd ~/coffeecherry-pi/coffeecherry/; python3 install.py update`.
 Please bear in mind that this will overwrite any local custom changes you've made so you should probably back up first.

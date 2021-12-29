@@ -1,0 +1,21 @@
+sensor:
+  - platform: rest
+    name: 'CoffeeCherry Boiler Temperature (Bottom)'
+    resource: http://192.168.0.10:5000/brew/temperature
+    
+  - platform: rest
+    name: 'CoffeeCherry Boiler Temperature (Top)'
+    resource: http://192.168.0.10:5000/steam/temperature
+    
+switch:
+  - platform: rest
+    name: 'CoffeCherry Pi Brew PID'
+    resource: http://192.168.0.10:5000/brew/
+    body_on: 'on'
+    body_off: 'off'
+    
+  - platform: rest
+    name: 'CoffeCherry Pi Steam PID'
+    resource: http://192.168.0.10:5000/steam/
+    body_on: 'on'
+    body_off: 'off'
