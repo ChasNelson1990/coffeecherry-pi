@@ -40,6 +40,7 @@ If you're new to `raspi-config` read this page: https://www.raspberrypi.org/docu
 3. If you're not use to the command line and SSH then you could turn on and set-up the VNC interface - I will not write anymore about this.
 4. As I won't use the graphical interface I have also set the boot options to load straight into command line.
 5. While you're in the boot options, ensure that the boot waits for the network to be available as we need that for communicating between the CoffeeCherry Pi and the main Home Assistant server.
+6. And we need access to the GPIO pins remotely.
 
 ### Clone CoffeeCherry Pi onto the Raspberry Pi
 
